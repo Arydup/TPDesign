@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Aryane Duperron">
+        <meta name="description" content="mon TP final">
+        <title>TP Final</title>
+        <link rel="stylesheet" href="css/normalize.css"/>
+        <link href="css/styles.css" rel="stylesheet" type="text/css" media="screen">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta name="robots" content="noindex, nofollow"/>
+    </head>
+
+    <body>
+        <header>
+            <div class="hautPage">
+                <div class="positionBarre">
+                    <a href="#">
+                        <img class="logo" src="images/logo.png" alt="logo">
+                    </a>
+                    <div class="choixLanguePC">
+                        <p>fr</p>
+                        <p>/</p>
+                        <p>en</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="barreNav">
+                <div class="boite" onclick="CliquerNav(this)">
+                <div class="barre1"></div>
+                <div class="barre2"></div>
+                <div class="barre3"></div>
+            </div>
+            <ul class="texteNav">
+                <a href="#">
+                    <li class="actif"><i class="fa fa-home icone active"></i> Accueil</li>
+                </a>
+                <li><i class="fa fa-user icone"></i> Auteur</li>
+                <li><i class="fa fa-film icone"></i> Films</li>
+                <li><i class="fa fa-book icone"></i> Livres</li>
+                <li><i class="fa fa-gamepad icone"></i> Jeux</li>
+                <li><i class="fa fa-rss icone"></i> Nouvelles</li>
+            </ul>
+            <div class="choixLangueCell">
+                <p>fr</p>
+                <p>/</p>
+                <p>en</p>
+            </div>
+            <ul class=media>
+                <li><i class="fa fa-facebook"></i></li>
+                <li><i class="fa fa-instagram"></i></li>
+                <li><i class="fa fa-twitter"></i></li>
+            </ul>
+            </div>
+        </header>
+
+        <main>
+            <div class=presentation>
+                <img src="images/anneau.jpg" alt="image d'anneau" class="imgPresentation">
+                <div class="rectangle"></div>
+            </div>
+            <div class="texteCentral">
+                <div class="pageActive">
+                    <h1>Accueil</h1>
+                </div>
+                <section class="introduction">
+                    <h2>Le monde du Seigneur des anneaux</h2>
+                    <div class="contenuSection">
+                        <img src="images/communaute.jpg" alt="image de la communauté de l'anneaux" class="imgSection">
+                        <p>
+                            Bienvenue sur le site non officiel par excellence du Seigneur des anneaux! Hobbits, elfes, nains, trolls et orcs;
+                            l’univers qu’a créé le très célèbre J.R.R. Tolkien pour nous est l’un, si ce n’est LE plus riche qui soit.
+                            L’héritage de sa création a influencé plus d’une génération, et presque tout ce qui se crée de nos jours dans le monde de la fantasy porte sa marque. 
+                        </p>
+                        <p>
+                            Dans ces pages, je tenterai de vous en apprendre un peu plus sur l’œuvre magnifique du Seigneur des anneaux,
+                            que vous soyez des admirateurs de longue date ou de simples passants pour qui les mots hobbit et mordor ne veulent rien dire!
+                        </p>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <footer>
+            <p>
+                Modification d'un site sur la franchise du Seigneur des anneaux: https://lord-of-the-rings.org/
+            </p>
+            <p>Effectuée par Aryane Duperron</p>
+        </footer>
+        <script>
+            function CliquerNav(x) {   
+              document.querySelector("#barreNav").classList.toggle("bougerNav");
+            }
+        </script>
+    </body>
+</html>

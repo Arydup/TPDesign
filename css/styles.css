@@ -1,0 +1,438 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+/*--------------------------------------------------------------
+Mise en forme générale.
+--------------------------------------------------------------*/
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    overflow-x: hidden;
+    min-width: 450px;
+    font-family: cursive, sans-serif;
+    background-color: #E8E5D9; 
+}
+/*--------------------------------------------------------------
+Styles en lien avec le header et la navigation
+--------------------------------------------------------------*/
+header{
+    display: flex;
+    flex-direction: column;
+}
+
+.hautPage{
+    background-color: #302524;
+    text-align: center;
+    order:2;
+}
+
+.hautPage img{
+    width: 175px;
+}
+
+#barreNav li:hover, #barreNav li:hover i{
+    color: lightyellow;
+}
+
+#barreNav{
+    font-family: 'Indie Flower', cursive;
+    z-index: 1;
+    position:absolute;
+    background-color: #473735;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    order:1;
+    height: 100%;
+    width: 70%;
+    font-size: 1.6em;
+    transform: translate(-100%);
+    position: fixed;
+}
+
+#barreNav ul, #barreNav p{
+    color: #BCB8B8;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.texteNav{
+    display: flex;
+    flex-direction: column;
+}
+.texteNav li{
+    margin-left: 7vw;
+    height: 10vh; 
+}
+.texteNav li:first-child{
+    margin-top: 10vh;
+}
+
+.texteNav i{
+    width: 50px;
+    color:rgba(188, 184, 184, 0.3);
+}
+
+.media{
+    display: flex;
+    justify-content: space-around;
+}
+
+a{
+    text-decoration: none;
+}
+
+.actif, .actif i{
+    color: #F9F7ED;
+}
+
+/*--------------------------------------------------------------
+styles du bouton burger
+--------------------------------------------------------------*/
+.boite {
+    position: absolute;
+    right: -75px;
+    top: 10px;
+    background-color: #473735;
+    cursor: pointer;
+    padding: 20px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.barre1, .barre2, .barre3 {
+    border-radius: 10px;
+    width: 35px;
+    height: 5px;
+    background-color: #BCB8B8;
+    margin: 6px;
+    transition: 0.4s;
+}
+
+.bougerNav .barre1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.bougerNav .barre2 {opacity: 0;}
+
+.bougerNav .barre3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+#barreNav.bougerNav {
+    -webkit-transform: translate(0%);
+    transform: translate(0%);
+}
+
+/*--------------------------------------------------------------
+styles en lien avec les choix de langue
+--------------------------------------------------------------*/
+.choixLangueCell p:first-child:hover, .choixLangueCell p:last-child:hover{
+    text-decoration: underline;
+}
+
+.choixLanguePC{
+    display: none;
+}
+
+.choixLangueCell{
+    text-align: center;
+}
+
+.choixLangueCell p{
+    display: inline-block;
+}
+
+/*--------------------------------------------------------------
+styles en lien avec l'image centrale et ce qu'il y a dessous
+--------------------------------------------------------------*/
+.presentation{
+    position: relative;
+    z-index: 0;
+}
+.imgPresentation{
+    width: 100%;
+}
+.rectangle{
+    position: absolute;
+    background-color: #473735;
+    height: 15%;
+    width:100%;
+    bottom: -15px;
+}
+
+.texteCentral{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.pageActive{
+    font-family: 'Indie Flower', cursive;
+    top: -3vw;
+    position: absolute;
+    border: 1px solid white;
+    text-align: center;
+    width: 40%;
+    background-color: #2E1B1B;
+    color: #ECC74D;
+}
+
+h1{
+    font-weight: normal;
+}
+
+/*--------------------------------------------------------------
+styles en lien avec la section centrale de texte
+--------------------------------------------------------------*/
+.imgSection{
+    display: none;
+}
+
+.introduction{
+    position: relative;
+    background-color: #F9F7ED;
+    border: 1px solid #C1B8A0;
+    text-align: center;
+    margin: 100px 2vw;
+    padding-top: 40px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.introduction h2{
+    font-family: 'Indie Flower', cursive;
+    position: absolute;
+    text-align: center;
+    top: 25px;
+    padding: 10px;
+    background-color: #A7B274;
+    border: 1px solid #707070;
+    font-weight: normal;
+}
+.contenuSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    margin: 0px 2vw 2vw 2vw;
+    padding-top: 30px;
+    background-color: rgba(167,178,116, 0.34);
+}
+.contenuSection p{
+    margin: 2vw;
+    margin-top: 10px;
+    line-height:normal;
+}
+
+/*--------------------------------------------------------------
+style du footer
+--------------------------------------------------------------*/
+footer{
+    padding: 2vw;
+    text-align: center;
+    background-color: #302524;
+    color: #BCB8B8;
+    line-height: normal;
+    font-size: 0.8em;
+}
+
+/*--------------------------------------------------------------
+Pour les écrans moyens
+--------------------------------------------------------------*/
+@media screen and (min-width: 600px){
+    /*--------------------------------------------------------------
+    Styles en lien avec le header et la navigation
+    --------------------------------------------------------------*/
+    #barreNav{
+        transition: none;
+        transform: translate(0%);
+        flex-direction: row;
+        z-index: 1;
+        order: 2;
+        width: 100%;
+        position:relative;
+    }
+    
+    .texteNav{
+        width: 100%;
+        flex-direction:row;
+        justify-content: space-around;
+    }
+    
+    .texteNav li{
+        padding: 20px  10px;
+        margin: 0px;
+        height: auto;
+    }
+    
+    .texteNav li i{
+        display: none;
+    }
+    
+    .texteNav li:first-child{
+        margin: 0px;
+    }
+    
+    .media{
+        display: none;
+    }
+    
+    /*Pour faire disparaître le bouton burger*/
+    .boite{
+        display: none;
+    }
+    
+    .positionBarre{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 30px;
+        margin: 0 auto;
+        max-width: 1024px;
+    }
+    
+    /*--------------------------------------------------------------
+    Style sous l'image centrale
+    --------------------------------------------------------------*/
+    .rectangle{
+        height: 10%;
+        bottom: 0px;
+    }
+    
+    /*--------------------------------------------------------------
+    Styles en lien avec le choix de langue
+    --------------------------------------------------------------*/
+    .choixLanguePC{
+        font-family: 'Indie Flower', cursive;
+        display: block;
+    }
+    .choixLanguePC p{
+        padding:15px 10px;
+        display:inline-block;
+        color: #ECC74D;
+        font-size: 1.5em;
+    }
+    
+    .choixLanguePC p:first-child:hover, .choixLanguePC p:last-child:hover{
+        text-decoration: underline;
+    }
+    
+    .choixLangueCell{
+        display: none;
+    }
+    
+    /*--------------------------------------------------------------
+    Styles en lien avec la section centrale
+    --------------------------------------------------------------*/
+    .introduction{
+        border: 2px solid #C1B8A0;
+    }
+    
+    h2{
+        font-size: 1.9em;
+    }
+    .contenuSection{
+        font-size: 1.1em;
+    }
+    
+    /*--------------------------------------------------------------
+    Style du footer
+    --------------------------------------------------------------*/
+    footer{
+        font-size: 1em;
+    }
+}
+/*--------------------------------------------------------------
+Pour les grands écrans
+--------------------------------------------------------------*/
+@media screen and (min-width: 1024px){
+    /*--------------------------------------------------------------
+    style global
+    --------------------------------------------------------------*/
+    body{
+        max-width: 1024px;
+    }
+    /*--------------------------------------------------------------
+    styles du header et de la barre de navigation
+    --------------------------------------------------------------*/
+    .hautPage{
+        position: absolute;
+        left: 0;
+        width: 100%;   
+    }
+    #barreNav{
+        margin-top:98px;
+    }
+    .texteNav li i{
+        display: inline-block;
+    }
+    
+    /*--------------------------------------------------------------
+    styles de l'image sous la navigation
+    --------------------------------------------------------------*/
+    .imgPresentation, .rectangle{
+        width: 1024px;
+    }
+    
+    .pageActive{
+        top: -30px;
+    }
+    
+    h1{
+        font-weight: bold;
+    }
+    /*--------------------------------------------------------------
+    styles de la section centrale
+    --------------------------------------------------------------*/
+    .introduction{
+        border: 3px solid #C1B8A0;
+        margin: 100px 2vw;
+        height: 600px;
+    }
+    
+    .contenuSection{
+        display: inline-block;
+        margin: 0px 20px 20px 20px;
+    }
+    
+    .contenuSection p{
+        margin: 0px;
+        height: 300px;
+        padding:60px;
+        text-align: left;
+    }
+    
+    .contenuSection p:last-child{
+        text-align: center;
+        height: 200px;
+    }
+    
+    .imgSection{
+        margin: 50px 50px 20px 30px;
+        display:block;
+        float: left;
+        width: 460px;
+        border: 4px solid #707070;
+        border-radius: 10px;
+    }
+    
+    /*--------------------------------------------------------------
+    style du footer
+    --------------------------------------------------------------*/
+    footer{
+        width: 100vw;
+        position:absolute;
+        left: 0px;
+        padding: 20px;
+    }
+}
